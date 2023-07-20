@@ -132,7 +132,7 @@ h2 {
 .header .bg-image {
   position: relative;
   height: 100vh;
-  background-image: url("../Img/schron.jpeg");
+  background-image: url("./Img/schron.jpeg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
