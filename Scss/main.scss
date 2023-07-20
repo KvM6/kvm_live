@@ -1,0 +1,440 @@
+@import "./colors";
+@import "./animation";
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-padding-top: 94px;
+}
+body {
+	font-family: "Raleway", sans-serif;
+	background-color: $bg-color;
+}
+h2 {
+	font-size: 30px;
+	text-align: center;
+	color: $text-nav-color;
+}
+.underline {
+	margin: auto;
+	width: 200px;
+	height: 5px;
+	background-color: $text-nav-color;
+}
+.mask {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-bg-shadow {
+	background-color: #010d13d8;
+}
+
+.navbar {
+	opacity: 0;
+	transform: translateY(-110%);
+	transition: background-color 0.6s ease-in-out, opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+	text-transform: uppercase;
+	.navbar-nav {
+		.nav-link {
+			color: $text-nav-color;
+			text-shadow: 1px 1px 2px rgb(22, 20, 20);
+		}
+		.nav-link:hover {
+			color: $active-color;
+		}
+		.nav-link.active {
+			color: $active-color;
+		}
+		.nav-link.active:hover {
+			color: $active-color;
+		}
+	}
+	.fa-bars {
+		color: $text-nav-color;
+		padding: 20px;
+		font-size: 30px;
+	}
+}
+
+.header {
+	color: $text-nav-color;
+	.bg-image {
+		position: relative;
+		height: 100vh;
+		background-image: url("../Img/schron.jpeg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		h1 {
+			padding: 10px 0;
+			font-size: 70px;
+			font-weight: bold;
+			text-shadow: 1px 1px 3px rgb(0, 0, 0);
+		}
+		p {
+			// font-weight: bold;
+			font-size: 24px;
+		}
+		.btn {
+			margin: 20px 0;
+			padding: 5px 40px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $primary-color;
+			background-color: $text-nav-color;
+			transition: background-color 0.6s ease-in-out;
+		}
+		.btn:hover {
+			background-color: $active-color;
+			text-shadow: 1px 1px 5px rgb(136, 136, 136);
+		}
+	}
+}
+
+.about-me {
+	.about-me-text {
+		letter-spacing: 2px;
+		font-size: 16px;
+		color: $text-nav-color;
+
+		p {
+			margin-bottom: 40px;
+		}
+		a {
+			text-decoration: none;
+			.secondP {
+				color: $text-nav-color;
+				text-decoration: underline;
+				transition: color 0.3s;
+			}
+			.secondP:hover {
+				color: $active-color;
+			}
+		}
+	}
+}
+
+.my-works {
+	.audio-card-wrap {
+		.card {
+			margin-bottom: 50px;
+			color: $text-nav-color;
+			background-color: $bg-color;
+			border: none;
+
+			.card-body {
+				h3 {
+					padding: 20px 0;
+					font-size: 25px;
+					font-weight: bold;
+				}
+				p {
+					margin-bottom: 20px;
+					padding: 10px;
+					font-size: 16px;
+				}
+			}
+			.card-footer {
+				color: $primary-color;
+				background-color: $bg-color;
+				border-top: 0px;
+			}
+			.fa-soundcloud {
+				font-size: 100px;
+				color: $text-nav-color;
+			}
+		}
+	}
+}
+.contact {
+	.contact-wrap {
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 80%;
+			max-width: 600px;
+		}
+		.contact-form,
+		.contact-form-top {
+			display: flex;
+			flex-direction: column;
+
+			.form-label {
+				margin-bottom: 10px;
+				font-size: 20px;
+				color: $text-nav-color;
+			}
+
+			.form-input {
+				margin-bottom: 20px;
+				padding: 10px;
+				border: none;
+				border-radius: 8px;
+				font-size: 16px;
+				color: $primary-color;
+			}
+
+			.form-textarea {
+				margin-bottom: 20px;
+				padding: 10px;
+				border: none;
+				border-radius: 8px;
+				font-size: 16px;
+				color: $primary-color;
+				resize: vertical;
+				min-height: 50px;
+			}
+
+			.form-btn {
+				align-self: flex-end;
+				margin-bottom: 50px;
+				padding: 10px;
+				width: 100%;
+				max-width: 200px;
+				border: none;
+				border-radius: 8px;
+				font-size: 16px;
+				font-weight: bold;
+				color: $primary-color;
+				background-color: $text-nav-color;
+				cursor: pointer;
+				transition: background-color 0.6s ease-in-out;
+			}
+			.form-btn:hover {
+				background-color: $active-color;
+				text-shadow: 1px 1px 5px rgb(136, 136, 136);
+			}
+		}
+		.contact-box {
+			color: $text-nav-color;
+			background-color: $bg-color;
+			overflow: hidden;
+
+			i {
+				font-size: 30px;
+			}
+			p {
+				font-size: 24px;
+			}
+			.contact-line {
+				padding: 20px 40px;
+				font-size: 24px;
+				transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+			}
+			.contact-line:hover {
+				color: $active-color;
+				transform: scale(1.2);
+			}
+
+			.contact-card-title {
+				margin: 60px 20px;
+				font-size: 24px;
+			}
+
+			.contact-icon-animation {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				
+				.media-box {
+					width: 200px;
+					cursor: pointer;
+					a {
+						color: $text-nav-color;
+						text-decoration: none;
+
+						i {
+							padding: 20px 0;
+							font-size: 60px;
+							transition: transform 0.6s ease-in-out, color 0.3s ease-in-out;
+						}
+
+						.media-title {
+							margin-bottom: 20px;
+							padding: 10px;
+							font-size: 16px;
+							transition: transform 0.6s 0.2s ease-in-out,
+								color 0.6s 0.2s ease-in-out;
+						}
+					}
+				}
+				.media-box:hover i {
+					transform: scale(1.4);
+					color: $active-color;
+				}
+				.media-box:hover .media-title {
+					transform: scale(1.2);
+					color: $active-color;
+				}
+			}
+		}
+	}
+}
+.footer {
+	background-color: $bg-color;
+	p {
+		color: $text-nav-color;
+	}
+}
+
+@media (min-width: 768px) {
+	h2 {
+		font-size: 40px;
+	}
+	.navbar {
+		.navbar-nav {
+			.nav-link {
+				font-size: 24px;
+			}
+		}
+		.fa-bars {
+			font-size: 30px;
+		}
+	}
+	.header {
+		.bg-image {
+			h1 {
+				font-size: 80px;
+			}
+			p {
+				font-size: 28px;
+			}
+			.btn {
+				font-size: 24px;
+			}
+		}
+	}
+	.about-me {
+		.about-me-text {
+			font-size: 20px;
+		}
+	}
+	.my-works {
+		.audio-card-wrap {
+			.card {
+				.card-body {
+					h3 {
+						font-size: 35px;
+					}
+					p {
+						font-size: 20px;
+					}
+				}
+				.sc-title {
+					a {
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+	.contact {
+		.contact-wrap {
+			.contact-form {
+				.form-label {
+					font-size: 26px;
+				}
+			}
+			.contact-box {
+				i {
+					font-size: 50px;
+				}
+				p {
+					font-size: 30px;
+				}
+				.contact-card-title {
+					font-size: 35px;
+				}
+				.contact-line {
+					font-size: 30px;
+				}
+
+				.contact-icon-animation {
+					.media-box {
+						width: 300px;
+						a {
+							i {
+								font-size: 80px;
+							}
+							.media-title {
+								font-size: 24px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 94px;
+	}
+	h2 {
+		font-size: 50px;
+	}
+	.navbar {
+		.navbar-nav {
+			.nav-link {
+				font-size: 24px;
+			}
+		}
+	}
+	.header {
+		.bg-image {
+			h1 {
+				font-size: 100px;
+			}
+			p {
+				font-size: 30px;
+			}
+			.btn {
+				font-size: 24px;
+			}
+		}
+	}
+	.about-me {
+		.about-me-text {
+			font-size: 20px;
+		}
+	}
+	.my-works {
+		.audio-card-wrap {
+			.card {
+				h3 {
+					font-size: 35px;
+				}
+				p {
+					font-size: 30px;
+				}
+				.card-footer {
+					iframe {
+						height: 200px;
+						width: 90%;
+					}
+					.sc-title {
+						a {
+							font-size: 35px;
+						}
+					}
+				}
+				.fa-soundcloud {
+					font-size: 120px;
+				}
+			}
+		}
+	}
+	.footer {
+		font-size: 30px;
+	}
+}
