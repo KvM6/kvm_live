@@ -135,7 +135,6 @@ h2 {
   background-image: url("../Img/schron.jpeg");
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 }
 .header .bg-image h1 {
   padding: 10px 0;
